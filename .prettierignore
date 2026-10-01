@@ -1,0 +1,7 @@
+# Generated from tokens/ — formatting is the generator's business.
+src/styles/theme.css
+smsp-brand-identity.md
+.next
+node_modules
+playwright-report
+test-results

@@ -1,0 +1,7 @@
+/*
+ * The app's single stylesheet entry point.
+ *
+ * theme.css is GENERATED from tokens/ — never edit it, and never add token definitions
+ * here. If a screen needs a value that does not exist yet, extend tokens/ and regenerate.
+ */
+@import "../styles/theme.css";

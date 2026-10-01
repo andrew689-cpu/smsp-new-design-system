@@ -1,0 +1,455 @@
+/*
+GENERATED FILE — DO NOT EDIT.
+Source of truth: tokens/
+Regenerate: npm run tokens
+Edit src/styles/theme.css and your change will be overwritten.
+*/
+
+@import "tailwindcss";
+
+/* ============================================================
+   1. Runtime theme variables
+
+   Declared here rather than inside @theme so they can be swapped at runtime.
+   @theme inline (section 2) maps Tailwind's namespaces onto these, which is what
+   makes a single utility class resolve correctly in both themes.
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+
+  /* Semantic colour roles */
+  --smsp-color-text-default: #1B191A;
+  --smsp-color-text-muted: #5D5F61;
+  --smsp-color-text-subtle: #767576;
+  --smsp-color-text-link: #C1121F;
+  --smsp-color-text-on-brand: #FEFEFE;
+  --smsp-color-text-disabled: #A4A3A3;
+  --smsp-color-text-inverse: #FEFEFE;
+  --smsp-color-text-inverse-muted: #D1D1D1;
+  --smsp-color-bg-canvas: #FEFEFE;
+  --smsp-color-bg-surface: #FEFEFE;
+  --smsp-color-bg-subtle: #F3F3F3;
+  --smsp-color-bg-brand-subtle: #FFF2F2;
+  --smsp-color-bg-inverse: #1B191A;
+  --smsp-color-bg-inverse-raised: #2E2C2D;
+  --smsp-color-border-default: #D1D1D1;
+  --smsp-color-border-strong: #767576;
+  --smsp-color-border-inverse: #494748;
+  --smsp-color-action-primary: #D70100;
+  --smsp-color-action-primary-hover: #C1121F;
+  --smsp-color-action-primary-active: #A00E19;
+  --smsp-color-feedback-danger: #A00E19;
+  --smsp-color-feedback-success: #087C08;
+  --smsp-color-feedback-warning: #F6953C;
+  --smsp-color-feedback-info: #1E6FC8;
+  --smsp-color-brand-hero: #FF0000;
+  --smsp-color-focus-ring: #C1121F;
+  --smsp-color-overlay: rgba(27, 25, 26, 0.6);
+
+  /* Component colour tokens */
+  --smsp-button-primary-bg: #D70100;
+  --smsp-button-primary-bg-hover: #C1121F;
+  --smsp-button-primary-label: #FEFEFE;
+  --smsp-input-bg: #FEFEFE;
+  --smsp-input-border: #767576;
+  --smsp-input-text: #1B191A;
+  --smsp-card-bg: #FEFEFE;
+  --smsp-card-border: #D1D1D1;
+  --smsp-table-header-bg: #F3F3F3;
+  --smsp-table-header-text: #1B191A;
+  --smsp-table-border: #D1D1D1;
+  --smsp-badge-danger-bg: #F3F3F3;
+  --smsp-badge-danger-accent: #A00E19;
+  --smsp-badge-danger-text: #1B191A;
+  --smsp-badge-success-bg: #F3F3F3;
+  --smsp-badge-success-accent: #087C08;
+  --smsp-badge-success-text: #1B191A;
+
+  /* Elevation — light uses layered shadows, dark a hairline ring. By design. */
+  --smsp-elevation-1: 0 1px 2px rgba(27,25,26,0.06), 0 1px 3px rgba(27,25,26,0.10);
+  --smsp-elevation-2: 0 2px 4px rgba(27,25,26,0.06), 0 4px 8px rgba(27,25,26,0.10);
+  --smsp-elevation-3: 0 4px 8px rgba(27,25,26,0.08), 0 8px 16px rgba(27,25,26,0.12);
+  --smsp-elevation-4: 0 8px 16px rgba(27,25,26,0.10), 0 16px 32px rgba(27,25,26,0.16);
+  --smsp-elevation-up-1: 0 -4px 12px rgba(27,25,26,0.08);
+  --smsp-elevation-card: var(--smsp-elevation-1);
+  --smsp-elevation-dropdown: var(--smsp-elevation-2);
+  --smsp-elevation-popover: var(--smsp-elevation-3);
+  --smsp-elevation-modal: var(--smsp-elevation-4);
+  --smsp-elevation-sticky: var(--smsp-elevation-up-1);
+}
+
+/* Explicit choice wins in both directions. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Semantic colour roles */
+  --smsp-color-text-default: #FBFBFB;
+  --smsp-color-text-muted: #D1D1D1;
+  --smsp-color-text-subtle: #A4A3A3;
+  --smsp-color-text-link: #FE6766;
+  --smsp-color-text-on-brand: #FEFEFE;
+  --smsp-color-text-disabled: #A4A3A3;
+  --smsp-color-text-inverse: #FEFEFE;
+  --smsp-color-text-inverse-muted: #D1D1D1;
+  --smsp-color-bg-canvas: #131112;
+  --smsp-color-bg-surface: #1B191A;
+  --smsp-color-bg-subtle: #2E2C2D;
+  --smsp-color-bg-brand-subtle: #7A0A13;
+  --smsp-color-bg-inverse: #1B191A;
+  --smsp-color-bg-inverse-raised: #2E2C2D;
+  --smsp-color-border-default: #494748;
+  --smsp-color-border-strong: #767576;
+  --smsp-color-border-inverse: #494748;
+  --smsp-color-action-primary: #D70100;
+  --smsp-color-action-primary-hover: #FF0000;
+  --smsp-color-action-primary-active: #C1121F;
+  --smsp-color-feedback-danger: #FE3433;
+  --smsp-color-feedback-success: #4CC24C;
+  --smsp-color-feedback-warning: #F8A857;
+  --smsp-color-feedback-info: #66A3E8;
+  --smsp-color-brand-hero: #FF0000;
+  --smsp-color-focus-ring: #FE6766;
+  --smsp-color-overlay: rgba(27, 25, 26, 0.6);
+
+  /* Component colour tokens */
+  --smsp-button-primary-bg: #D70100;
+  --smsp-button-primary-bg-hover: #FF0000;
+  --smsp-button-primary-label: #FEFEFE;
+  --smsp-input-bg: #1B191A;
+  --smsp-input-border: #767576;
+  --smsp-input-text: #FBFBFB;
+  --smsp-card-bg: #1B191A;
+  --smsp-card-border: #494748;
+  --smsp-table-header-bg: #2E2C2D;
+  --smsp-table-header-text: #FBFBFB;
+  --smsp-table-border: #494748;
+  --smsp-badge-danger-bg: #2E2C2D;
+  --smsp-badge-danger-accent: #FE3433;
+  --smsp-badge-danger-text: #FBFBFB;
+  --smsp-badge-success-bg: #2E2C2D;
+  --smsp-badge-success-accent: #4CC24C;
+  --smsp-badge-success-text: #FBFBFB;
+
+  /* Elevation — light uses layered shadows, dark a hairline ring. By design. */
+  --smsp-elevation-1: 0 0 0 1px #767576;
+  --smsp-elevation-2: 0 0 0 1px #767576;
+  --smsp-elevation-3: 0 0 0 1px #767576;
+  --smsp-elevation-4: 0 0 0 1px #767576;
+  --smsp-elevation-up-1: 0 -1px 0 0 #767576;
+  --smsp-elevation-card: var(--smsp-elevation-1);
+  --smsp-elevation-dropdown: var(--smsp-elevation-2);
+  --smsp-elevation-popover: var(--smsp-elevation-3);
+  --smsp-elevation-modal: var(--smsp-elevation-4);
+  --smsp-elevation-sticky: var(--smsp-elevation-up-1);
+}
+
+/* System preference, but never overriding an explicit light choice. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    /* Semantic colour roles */
+    --smsp-color-text-default: #FBFBFB;
+    --smsp-color-text-muted: #D1D1D1;
+    --smsp-color-text-subtle: #A4A3A3;
+    --smsp-color-text-link: #FE6766;
+    --smsp-color-text-on-brand: #FEFEFE;
+    --smsp-color-text-disabled: #A4A3A3;
+    --smsp-color-text-inverse: #FEFEFE;
+    --smsp-color-text-inverse-muted: #D1D1D1;
+    --smsp-color-bg-canvas: #131112;
+    --smsp-color-bg-surface: #1B191A;
+    --smsp-color-bg-subtle: #2E2C2D;
+    --smsp-color-bg-brand-subtle: #7A0A13;
+    --smsp-color-bg-inverse: #1B191A;
+    --smsp-color-bg-inverse-raised: #2E2C2D;
+    --smsp-color-border-default: #494748;
+    --smsp-color-border-strong: #767576;
+    --smsp-color-border-inverse: #494748;
+    --smsp-color-action-primary: #D70100;
+    --smsp-color-action-primary-hover: #FF0000;
+    --smsp-color-action-primary-active: #C1121F;
+    --smsp-color-feedback-danger: #FE3433;
+    --smsp-color-feedback-success: #4CC24C;
+    --smsp-color-feedback-warning: #F8A857;
+    --smsp-color-feedback-info: #66A3E8;
+    --smsp-color-brand-hero: #FF0000;
+    --smsp-color-focus-ring: #FE6766;
+    --smsp-color-overlay: rgba(27, 25, 26, 0.6);
+
+    /* Component colour tokens */
+    --smsp-button-primary-bg: #D70100;
+    --smsp-button-primary-bg-hover: #FF0000;
+    --smsp-button-primary-label: #FEFEFE;
+    --smsp-input-bg: #1B191A;
+    --smsp-input-border: #767576;
+    --smsp-input-text: #FBFBFB;
+    --smsp-card-bg: #1B191A;
+    --smsp-card-border: #494748;
+    --smsp-table-header-bg: #2E2C2D;
+    --smsp-table-header-text: #FBFBFB;
+    --smsp-table-border: #494748;
+    --smsp-badge-danger-bg: #2E2C2D;
+    --smsp-badge-danger-accent: #FE3433;
+    --smsp-badge-danger-text: #FBFBFB;
+    --smsp-badge-success-bg: #2E2C2D;
+    --smsp-badge-success-accent: #4CC24C;
+    --smsp-badge-success-text: #FBFBFB;
+
+    /* Elevation — light uses layered shadows, dark a hairline ring. By design. */
+    --smsp-elevation-1: 0 0 0 1px #767576;
+    --smsp-elevation-2: 0 0 0 1px #767576;
+    --smsp-elevation-3: 0 0 0 1px #767576;
+    --smsp-elevation-4: 0 0 0 1px #767576;
+    --smsp-elevation-up-1: 0 -1px 0 0 #767576;
+    --smsp-elevation-card: var(--smsp-elevation-1);
+    --smsp-elevation-dropdown: var(--smsp-elevation-2);
+    --smsp-elevation-popover: var(--smsp-elevation-3);
+    --smsp-elevation-modal: var(--smsp-elevation-4);
+    --smsp-elevation-sticky: var(--smsp-elevation-up-1);
+  }
+}
+
+/* ============================================================
+   2. Tailwind theme — namespace RESETS
+
+   Every reset below is load-bearing. Clearing a namespace means an off-system
+   utility does not compile at all, which is stronger enforcement than a linter
+   catching it afterwards: bg-red-500, p-7 and font-medium are not errors, they
+   are nothing. See docs/adr/0003-tailwind-v4-with-namespace-resets.md.
+   ============================================================ */
+
+@theme {
+  --color-*: initial;
+  --shadow-*: initial;
+  --spacing-*: initial;
+  --text-*: initial;
+  --font-*: initial;
+  --font-weight-*: initial;
+  --leading-*: initial;
+  --tracking-*: initial;
+  --radius-*: initial;
+  --breakpoint-*: initial;
+  --container-*: initial;
+  --ease-*: initial;
+}
+
+/* ============================================================
+   3. Tailwind theme — theme-aware mappings (inline, so they stay var() refs)
+   ============================================================ */
+
+@theme inline {
+  /* Text */
+  --color-text-default: var(--smsp-color-text-default);
+  --color-text-muted: var(--smsp-color-text-muted);
+  --color-text-subtle: var(--smsp-color-text-subtle);
+  --color-text-link: var(--smsp-color-text-link);
+  --color-text-on-brand: var(--smsp-color-text-on-brand);
+  --color-text-disabled: var(--smsp-color-text-disabled);
+  --color-text-inverse: var(--smsp-color-text-inverse);
+  --color-text-inverse-muted: var(--smsp-color-text-inverse-muted);
+  /* Background */
+  --color-bg-canvas: var(--smsp-color-bg-canvas);
+  --color-bg-surface: var(--smsp-color-bg-surface);
+  --color-bg-subtle: var(--smsp-color-bg-subtle);
+  --color-bg-brand-subtle: var(--smsp-color-bg-brand-subtle);
+  --color-bg-inverse: var(--smsp-color-bg-inverse);
+  --color-bg-inverse-raised: var(--smsp-color-bg-inverse-raised);
+  /* Border */
+  --color-border-default: var(--smsp-color-border-default);
+  --color-border-strong: var(--smsp-color-border-strong);
+  --color-border-inverse: var(--smsp-color-border-inverse);
+  /* Action */
+  --color-action-primary: var(--smsp-color-action-primary);
+  --color-action-primary-hover: var(--smsp-color-action-primary-hover);
+  --color-action-primary-active: var(--smsp-color-action-primary-active);
+  /* Feedback */
+  --color-feedback-danger: var(--smsp-color-feedback-danger);
+  --color-feedback-success: var(--smsp-color-feedback-success);
+  --color-feedback-warning: var(--smsp-color-feedback-warning);
+  --color-feedback-info: var(--smsp-color-feedback-info);
+  /* Brand & focus */
+  --color-brand-hero: var(--smsp-color-brand-hero);
+  --color-focus-ring: var(--smsp-color-focus-ring);
+  /* Overlay */
+  --color-overlay: var(--smsp-color-overlay);
+
+  /* Component tokens */
+  --color-button-primary-bg: var(--smsp-button-primary-bg);
+  --color-button-primary-bg-hover: var(--smsp-button-primary-bg-hover);
+  --color-button-primary-label: var(--smsp-button-primary-label);
+  --color-input-bg: var(--smsp-input-bg);
+  --color-input-border: var(--smsp-input-border);
+  --color-input-text: var(--smsp-input-text);
+  --color-card-bg: var(--smsp-card-bg);
+  --color-card-border: var(--smsp-card-border);
+  --color-table-header-bg: var(--smsp-table-header-bg);
+  --color-table-header-text: var(--smsp-table-header-text);
+  --color-table-border: var(--smsp-table-border);
+  --color-badge-danger-bg: var(--smsp-badge-danger-bg);
+  --color-badge-danger-accent: var(--smsp-badge-danger-accent);
+  --color-badge-danger-text: var(--smsp-badge-danger-text);
+  --color-badge-success-bg: var(--smsp-badge-success-bg);
+  --color-badge-success-accent: var(--smsp-badge-success-accent);
+  --color-badge-success-text: var(--smsp-badge-success-text);
+
+  /* Elevation as shadow utilities: shadow-card, shadow-modal, ... */
+  --shadow-card: var(--smsp-elevation-card);
+  --shadow-dropdown: var(--smsp-elevation-dropdown);
+  --shadow-popover: var(--smsp-elevation-popover);
+  --shadow-modal: var(--smsp-elevation-modal);
+  --shadow-sticky: var(--smsp-elevation-sticky);
+}
+
+/* ============================================================
+   4. Tailwind theme — static scales
+   ============================================================ */
+
+@theme {
+  /* Families. Never set Inter on prose. */
+  --font-body: Lato, 'Helvetica Neue', Arial, sans-serif;
+  --font-numeric: Inter, 'Helvetica Neue', Arial, sans-serif;
+
+  /* Lato ships 400/700/900 only. font-medium and font-semibold do not exist. */
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --font-weight-black: 900;
+
+  /* Type scale. 1rem = 10px, so every value is px / 10. */
+  --text-caption: 1.2rem;
+  --text-small: 1.4rem;
+  --text-body: 1.6rem;
+  --text-body-lg: 1.8rem;
+  --text-h4: 2rem;
+  --text-h3: 2.4rem;
+  --text-h2: 3.2rem;
+  --text-h1: 4rem;
+  --text-display: 6.4rem;
+
+  /* Line height */
+  --leading-tight: 1.15;
+  --leading-snug: 1.25;
+  --leading-normal: 1.5;
+
+  /* Letter spacing */
+  --tracking-tight: -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.04em;
+
+  /* Spacing — exactly ten steps, no multiplier scale. */
+  --spacing-1: 0.4rem;
+  --spacing-2: 0.8rem;
+  --spacing-3: 1.2rem;
+  --spacing-4: 1.6rem;
+  --spacing-5: 2.4rem;
+  --spacing-6: 3.2rem;
+  --spacing-7: 4.8rem;
+  --spacing-8: 6.4rem;
+  --spacing-9: 9.6rem;
+  --spacing-10: 12.8rem;
+
+  /* Named DIMENSIONS. Numeric sizing (w-10, min-h-11) is gone with the reset, so
+     anything measured gets a name. See tokens/space.ts. */
+  --spacing-target-min: 2.4rem;
+  --spacing-touch: 4.4rem;
+
+  /* Radius — biased square. Prefer the roles over the steps. */
+  --radius-none: 0px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;
+  --radius-xl: 8px;
+  --radius-pill: 9999px;
+  --radius-full: 50%;
+  --radius-control: 4px;
+  --radius-container: 6px;
+  --radius-overlay: 8px;
+
+  /* Breakpoint in px, NOT rem: media-query rem resolves against 16px, not our 10px. */
+  --breakpoint-md: 860px;
+
+  /* Containers */
+  --container-page: 1200px;
+  --container-sidebar: 280px;
+  --container-measure: 70ch;
+
+  /* Easing */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+/* ============================================================
+   5. Non-namespaced custom properties
+
+   Durations and z-index have no Tailwind namespace, so they are plain custom
+   properties. Reference them with var(); never write a raw ms value or a bare
+   z-index number.
+   ============================================================ */
+
+:root {
+  --duration-instant: 0ms;
+  --duration-fast: 100ms;
+  --duration-base: 150ms;
+  --duration-slow: 200ms;
+  --duration-slower: 300ms;
+  --easing-standard: cubic-bezier(0.2, 0, 0, 1);
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --z-base: 0;
+  --z-raised: 10;
+  --z-sticky: 20;
+  --z-navbar: 30;
+  --z-dropdown: 40;
+  --z-overlay: 50;
+  --z-modal: 60;
+  --z-toast: 70;
+}
+
+/* ============================================================
+   6. Base layer
+   ============================================================ */
+
+@layer base {
+  html {
+    /* The whole rem scale depends on this. Changing it silently rescales the system. */
+    font-size: 10px;
+  }
+
+  body {
+    background-color: var(--color-bg-canvas);
+    color: var(--color-text-default);
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    line-height: var(--leading-normal);
+  }
+
+  /* Headings are Lato Black, uppercase — the "engineered, stamped" read. */
+  h1, h2, h3, h4 {
+    font-weight: var(--font-weight-black);
+    line-height: var(--leading-snug);
+    text-transform: uppercase;
+  }
+
+  /* Never removed, never obscured. */
+  :focus-visible {
+    outline: var(--focus-ring-width) solid var(--color-focus-ring);
+    outline-offset: var(--focus-ring-offset);
+  }
+
+  /* A bare number is ambiguous in a steel catalogue: specs always carry a unit. */
+  [data-numeric] {
+    font-family: var(--font-numeric);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+
+  /* Motion a user cannot turn off does not ship. */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: var(--duration-instant) !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: var(--duration-instant) !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
