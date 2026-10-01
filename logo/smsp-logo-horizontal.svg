@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 420" role="img" aria-label="SMS Perkasa">
+  <title>SMS Perkasa</title>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&amp;display=swap');
+      .smsp-wordmark{font-family:'Lato','Helvetica Neue',Arial,sans-serif;font-weight:900;font-size:150px;letter-spacing:3px;fill:#1B191A;}
+    </style>
+  </defs>
+  <!-- Mark (faithful rebuild, measured from original), scaled 0.85 -->
+  <g transform="translate(10,20) scale(0.85)" fill="#FF0000">
+    <circle cx="259" cy="146" r="98"/>
+    <circle cx="124" cy="258" r="60"/>
+    <circle cx="199" cy="333" r="37.5"/>
+    <circle cx="246" cy="287" r="23"/>
+    <circle cx="217" cy="258" r="14"/>
+    <circle cx="199" cy="275" r="9.5"/>
+    <circle cx="210" cy="286" r="6.5"/>
+    <circle cx="215" cy="280" r="4"/>
+  </g>
+  <!-- Wordmark: Lato Black, uppercase, tracked (matches heading style) -->
+  <text class="smsp-wordmark" x="400" y="252">SMS PERKASA</text>
+</svg>

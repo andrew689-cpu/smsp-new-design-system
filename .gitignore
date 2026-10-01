@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Build output
+dist/
+build/
+
+# Test & tooling output
+coverage/
+playwright-report/
+test-results/
+blob-report/
+.playwright/
+
+# Generated artifact showcase
+showcase-artifact.html
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Editor / OS
+.DS_Store
+*.swp
+.idea/
+.vscode/*
+!.vscode/extensions.json
+
+# Local agent scratch
+.scratch/

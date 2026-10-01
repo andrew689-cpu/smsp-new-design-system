@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 420" role="img" aria-label="SMS Perkasa">
+  <title>SMS Perkasa</title>
+  <!-- Monochrome (near-black) mark for single-color / dark-on-light use. -->
+  <g fill="#1B191A">
+    <circle cx="259" cy="146" r="98"/>
+    <circle cx="124" cy="258" r="60"/>
+    <circle cx="199" cy="333" r="37.5"/>
+    <circle cx="246" cy="287" r="23"/>
+    <circle cx="217" cy="258" r="14"/>
+    <circle cx="199" cy="275" r="9.5"/>
+    <circle cx="210" cy="286" r="6.5"/>
+    <circle cx="215" cy="280" r="4"/>
+  </g>
+</svg>
