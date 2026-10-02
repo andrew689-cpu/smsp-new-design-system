@@ -9,7 +9,7 @@ import next from "eslint-config-next";
  */
 export default tseslint.config(
   {
-    ignores: [".next/**", "node_modules/**", "src/styles/theme.css", "playwright-report/**", "test-results/**"],
+    ignores: [".next/**", "node_modules/**", ".scratch/**", "src/styles/theme.css", "playwright-report/**", "test-results/**"],
   },
   js.configs.recommended,
   ...tseslint.configs.recommended,
